@@ -6,6 +6,7 @@ public class Book {
     private String author;
     private long ISBN;
     private double price;
+    private static int numberOfCreatedBooks = 0;
 
     // Constructors:
 
@@ -14,6 +15,7 @@ public class Book {
         this.author = "";
         this.ISBN = 0;
         this.price = 0.0;
+        numberOfCreatedBooks++;
     }
 
     public Book(String title, String author, long ISBN, double price) {
@@ -21,6 +23,7 @@ public class Book {
         this.author = author;
         this.ISBN = ISBN;
         this.price = price;
+        numberOfCreatedBooks++;
     }
 
     // Getters:
@@ -59,6 +62,12 @@ public class Book {
         this.price = price;
     }
 
-    
+    public String toString() {
+        return "Title: " + this.title + "\nAuthor: " + this.author + "\nISBN: " + this.ISBN + "\nPrice: " + this.price;
+    }
+
+    public static int findNumberOfCreatedBooks() {
+        return numberOfCreatedBooks;
+    }
     
 }

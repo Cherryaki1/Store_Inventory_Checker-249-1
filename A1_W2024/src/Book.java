@@ -62,12 +62,21 @@ public class Book {
         this.price = price;
     }
 
-    public String toString() {
-        return "Title: " + this.title + "\nAuthor: " + this.author + "\nISBN: " + this.ISBN + "\nPrice: " + this.price;
-    }
+    // Methods:
 
     public static int findNumberOfCreatedBooks() {
         return numberOfCreatedBooks;
     }
     
+    public boolean equals(Book newBook) {
+        if ((this.ISBN == newBook.ISBN) && (this.price == newBook.price))
+            return true;
+        else
+            return false;
+    }
+
+    public String toString() {
+        return "Title: " + this.title + "\nAuthor: " + this.author + "\nISBN: " + this.ISBN + "\nPrice: " + this.price;
+    }
+
 }

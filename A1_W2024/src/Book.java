@@ -18,7 +18,7 @@ public class Book {
         numberOfCreatedBooks++;
     }
 
-    public Book(String title, String author, long ISBN, double price) {
+    public Book(String author, String title, long ISBN, double price) {
         this.title = title;
         this.author = author;
         this.ISBN = ISBN;
@@ -76,7 +76,7 @@ public class Book {
     }
 
     public String toString() {
-        return "Title: " + this.title + "\nAuthor: " + this.author + "\nISBN: " + this.ISBN + "\nPrice: " + this.price;
+        return "Author: " + this.author + "\nTitle: " + this.title + "\nISBN: " + this.ISBN + "\nPrice: " + this.price + "\n";
     }
 
 }
